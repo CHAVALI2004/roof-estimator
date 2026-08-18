@@ -20,11 +20,11 @@ function AdminDashboard({ onLogout }) {
         const [configResponse, leadsResponse] =
           await Promise.all([
             fetch(
-              "http://localhost:5000/api/admin/config",
+              "https://roof-estimator-backend-wl3z.onrender.com/api/admin/config",
               { headers }
             ),
             fetch(
-              "http://localhost:5000/api/admin/leads",
+              "https://roof-estimator-backend-wl3z.onrender.com/api/admin/leads",
               { headers }
             ),
           ]);
@@ -131,7 +131,7 @@ function AdminDashboard({ onLogout }) {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/admin/config",
+        "https://roof-estimator-backend-wl3z.onrender.com/api/admin/config",
         {
           method: "PUT",
           headers: {
